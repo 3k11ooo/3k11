@@ -1,0 +1,92 @@
+/* import */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/* 大枠 */
+body{
+    background-color: #f7f8f9;
+    margin: 0%;
+}
+
+header {
+    background-color: #1f1f1f;
+    display: block;
+    height: 20%;
+}
+
+footer{
+    z-index: 2;
+	position: relative;
+    background-color: #1f1f1f;
+    display: block;
+    height: 20%;
+    padding: 10px;
+}
+
+section{
+	padding:30px;
+}
+
+section:nth-child(2n){
+	background:#ecf2fa;	
+}
+
+h1{
+    text-align: center;
+    margin: 0%;
+    padding: 1rem 0 0 0;
+}
+
+h2{
+    font-family: cursive;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+p{
+    font-size: 1.0rem;
+    font-family: monospace;
+    margin-top:20px;
+}
+
+/* class */
+.hTitle a{
+    color: #e5eef9;
+    font-family: 'Caveat', cursive;;
+    font-size: 3rem;
+    text-decoration: none; 
+}
+
+.fMes{
+    color: #e5eef9;
+    font-family: 'Caveat', cursive;;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* id */
+#hList{
+    margin: 0%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#hList{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#hList li{
+    list-style: none;
+}
+
+#hList li a{
+color: #e5eef9;
+font-size: 1.2rem;
+padding:0 20px;
+text-decoration: none;
+}
+
