@@ -1,0 +1,115 @@
+/*2階層目以降は横並びにしない*/
+nav ul ul{
+	display: block;
+} 
+
+/*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+nav ul li{
+	position: relative;
+}
+
+nav ul li li a{
+    padding-right:10%;
+}
+
+/*矢印の設定*/
+nav ul li.hasChild::before{
+	content:'';
+	position: absolute;
+	left:7px;
+	top:18px;
+	width:6px;
+	height:6px;
+	border-top: 2px solid #dddbd4;
+    border-right:2px solid #dddbd4;
+    transform: rotate(135deg);
+}
+
+nav li.hasChild ul{
+    /*絶対配置で位置を指定*/
+    padding: 0 1rem;
+	position: absolute;
+	left:0;
+	top:56px;
+	z-index: 4;
+    /*形状を指定*/
+	background:#4f4f4f;
+	width:200px;
+    /*はじめは非表示*/
+	visibility: hidden;
+	opacity: 0;
+    /*アニメーション設定*/
+	transition: all .3s;
+}
+
+/*hoverしたら表示*/
+nav li.hasChild:hover > ul,
+nav li.hasChild ul li:hover > ul,
+nav li.hasChild:active > ul,
+nav li.hasChild ul li:active > ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*ナビゲーションaタグの形状*/
+nav li.hasChild ul li a{
+    text-align: center;
+    padding-top: 10px;
+	color: #e5eef9;
+	border-bottom:solid 1px rgba(230, 230, 230, 0.6);
+}
+
+nav li.hasChild ul li:last-child a{
+	border-bottom:none;
+}
+
+nav li.hasChild ul li a:hover,
+nav li.hasChild ul li a:active{
+	background:#1f1f1f;
+}
+
+
+
+/*==768px以下の形状*/
+
+@media screen and (max-width:768px){
+	nav{
+		padding: 0;
+	}
+	
+	nav ul{
+		display: block;
+	}
+	
+	nav li.hasChild ul,
+	nav li.hasChild ul ul{
+  	position: relative;
+	left:0;
+	top:0;
+	width:100%;
+	visibility:visible;/*JSで制御するため一旦表示*/
+	opacity:1;/*JSで制御するため一旦表示*/
+	display: none;/*JSのslidetoggleで表示させるため非表示に*/
+	transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+}
+	
+nav ul li a{
+	border-bottom:1px solid #ccc;
+}
+
+/*矢印の位置と向き*/
+
+nav ul li.hasChild::before{
+	left:20px;	
+}
+
+nav ul ul li.hasChild::before{
+    transform: rotate(135deg);
+	left:20px;
+}
+    
+nav ul li.hasChild.active::before{
+    transform: rotate(-45deg);
+}
+
+}

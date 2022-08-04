@@ -70,13 +70,7 @@ p{
     list-style-type: none;
     display: flex;
     justify-content: center;
-    padding: 20px;
-}
-
-#hList{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 #hList li{
@@ -84,9 +78,15 @@ p{
 }
 
 #hList li a{
-color: #e5eef9;
-font-size: 1.2rem;
-padding:0 20px;
-text-decoration: none;
+    display: block;
+    color: #e5eef9;
+    font-size: 1.2rem;
+    padding:10px 20px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+#hList li a:hover{
+    color: #99ccff
 }
 

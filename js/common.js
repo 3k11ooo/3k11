@@ -1,3 +1,4 @@
+// スクリプト分割
 function header(rootDir) {
     $.ajax({
         url: rootDir + "subContents/header.html", // htmlファイル読み込み
@@ -23,3 +24,8 @@ function footer(){
         }
     })
 }
+
+// ドロップダウンメニュー
+$(".openbtn").click(function () {
+    $(this).toggleClass('active');
+});
