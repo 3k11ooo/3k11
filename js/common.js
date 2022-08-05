@@ -26,6 +26,28 @@ function footer(){
 }
 
 // ドロップダウンメニュー
-$(".openbtn").click(function () {
-    $(this).toggleClass('active');
+function mediaQueriesWin(){
+	var width = $(window).width();
+	if(width <= 768) {//横幅が768px以下の場合 
+		$(".hasChild>a").on('click', function() {
+			var parentElem =  $(this).parent();
+			$(parentElem).toggleClass('active');
+			$(parentElem).children('ul').stop().slideToggle(500);
+			return false;//リンクの無効化
+		});
+	}else{//横幅が768px以上の場合
+		$(".hasChild>a").off('click');
+		$(".hasChild").removeClass('active');
+		$('.hasChild').children('ul').css("display","");
+	}
+}
+
+// ページがリサイズされたら動かしたい場合の記述
+$(window).resize(function() {
+	mediaQueriesWin();/* ドロップダウンの関数を呼ぶ*/
+});
+
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load',function(){
+	mediaQueriesWin();/* ドロップダウンの関数を呼ぶ*/
 });

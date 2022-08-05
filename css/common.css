@@ -92,15 +92,17 @@ nav li.hasChild ul li a:active{
 	display: none;/*JSのslidetoggleで表示させるため非表示に*/
 	transition:none;/*JSで制御するためCSSのアニメーションを切る*/
 }
-	
+
+/*
 nav ul li a{
 	border-bottom:1px solid #ccc;
 }
+*/
 
 /*矢印の位置と向き*/
 
 nav ul li.hasChild::before{
-	left:20px;	
+	left:7px;	
 }
 
 nav ul ul li.hasChild::before{
