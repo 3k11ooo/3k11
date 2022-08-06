@@ -15,36 +15,51 @@
         <script src="js/common.js"></script>
         <script src="js/main.js"></script> 
         <script src="js/base.js"></script> 
+
+        <!-- veu.js 開発用 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        
     </head>
     <body>
         <!-- header 読み込み -->
         <!-- <script> header("../"); </script> -->
         <header>
             <h1 class="hTitle"><a href="index.html">3K11</a></h1>
-            <nav>
-                <ul id="hList">
-                    <li><a href="#About">About</a></li>
-                    <li class="hasChild"><a href="#">Products</a>
-                        <ul>
-                            <li><a href="#Products">Top</a></li>
-                            <li><a href="#">納島プロジェクト</a></li>
-                            <li><a href="#">page2</a></li>
-                            <li><a href="#">page3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#Contact">Contact</a></li>
-                    <!-- <li><a href="test.html">test</a></li> -->
-                </ul>
-            </nav>
+            <div id="hList">
+                <nav>
+                    <ul class="hList">
+                        <li><a href="#About">About</a></li>
+                        <li class="hasChild"><a href="#">Products</a>
+                            <div>
+                                <ul>
+                                    <li><a href="#Products">Top</a></li>
+                                    <li><a href="#">納島プロジェクト</a></li>
+                                    <li><a href="#">page2</a></li>
+                                    <li><a href="#">page3</a></li>
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <!-- <li><a href="test.html">test</a></li> -->
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <!-- main -->
-
+    <!--
         <section class="newsArea" id="News">
             <p>
                 news(未実装)
             </p>
         </section>
+        -->
+        <!-- <div id="hList">
+            <ul >
+                <li v-for="hList in hLists">{{ hList }}</li>
+            </ul>
+        </div> -->
 
         <section class="area" id="About">
             <h2>About</h2>

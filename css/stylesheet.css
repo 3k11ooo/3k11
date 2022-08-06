@@ -56,6 +56,30 @@ p{
     font-size: 3rem;
     text-decoration: none; 
 }
+.hList{
+    margin: 0%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.hList li{
+    list-style: none;
+}
+
+.hList li a{
+    display: block;
+    color: #e5eef9;
+    font-size: 1.2rem;
+    padding:10px 20px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.hList li a:hover{
+    color: #99ccff
+}
 
 .fMes{
     color: #e5eef9;
@@ -65,7 +89,7 @@ p{
 }
 
 /* id */
-#hList{
+.hList{
     margin: 0%;
     list-style-type: none;
     display: flex;
@@ -73,11 +97,11 @@ p{
     padding: 10px 20px;
 }
 
-#hList li{
+.hList li{
     list-style: none;
 }
 
-#hList li a{
+.hList li a{
     display: block;
     color: #e5eef9;
     font-size: 1.2rem;
@@ -86,7 +110,7 @@ p{
     transition: all .3s;
 }
 
-#hList li a:hover{
+.hList li a:hover{
     color: #99ccff
 }
 

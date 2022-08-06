@@ -26,6 +26,7 @@ function footer(){
 }
 
 // ドロップダウンメニュー
+/*
 function mediaQueriesWin(){
 	var width = $(window).width();
 	if(width <= 768) {//横幅が768px以下の場合 
@@ -44,10 +45,11 @@ function mediaQueriesWin(){
 
 // ページがリサイズされたら動かしたい場合の記述
 $(window).resize(function() {
-	mediaQueriesWin();/* ドロップダウンの関数を呼ぶ*/
+	mediaQueriesWin(); //ドロップダウンの関数を呼ぶ
 });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load',function(){
-	mediaQueriesWin();/* ドロップダウンの関数を呼ぶ*/
+	mediaQueriesWin(); // ドロップダウンの関数を呼ぶ
 });
+*/
