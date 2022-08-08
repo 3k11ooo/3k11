@@ -26,7 +26,7 @@ function footer(){
 }
 
 // ドロップダウンメニュー
-/*
+
 function mediaQueriesWin(){
 	var width = $(window).width();
 	if(width <= 768) {//横幅が768px以下の場合 
@@ -52,4 +52,3 @@ $(window).resize(function() {
 $(window).on('load',function(){
 	mediaQueriesWin(); // ドロップダウンの関数を呼ぶ
 });
-*/
